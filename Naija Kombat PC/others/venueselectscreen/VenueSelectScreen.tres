@@ -1,0 +1,16 @@
+[gd_resource type="StyleBoxTexture" load_steps=3 format=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.552083 )
+colors = PoolColorArray( 1, 0.976019, 0.878431, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[resource]
+texture = SubResource( 2 )
+region_rect = Rect2( 0, 0, 2048, 1 )
+margin_left = 8.0
+margin_top = 8.0
+margin_bottom = 8.0
+modulate_color = Color( 1, 1, 1, 0 )

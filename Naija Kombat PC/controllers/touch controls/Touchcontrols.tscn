@@ -1,0 +1,167 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://controllers/touch controls/textures/up_arrow.png" type="Texture" id=1]
+[ext_resource path="res://others/FPSmonitor/FPSmonitor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://controllers/touch controls/textures/block_icon.png" type="Texture" id=3]
+[ext_resource path="res://controllers/touch controls/textures/right_arrow.png" type="Texture" id=4]
+[ext_resource path="res://controllers/touch controls/textures/left_arrow.png" type="Texture" id=5]
+[ext_resource path="res://controllers/touch controls/textures/pause button.png" type="Texture" id=6]
+[ext_resource path="res://others/fonts/A Dripping Marker.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://controllers/touch controls/textures/kick_icon.png" type="Texture" id=8]
+[ext_resource path="res://controllers/touch controls/textures/punch_icon.png" type="Texture" id=9]
+[ext_resource path="res://controllers/touch controls/Touchcontrols.gd" type="Script" id=10]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 1
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+outline_size = 5
+outline_color = Color( 0.184314, 0.243137, 0.160784, 1 )
+extra_spacing_char = 5
+font_data = ExtResource( 7 )
+
+[node name="Touchcontrols" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1270.0
+margin_bottom = 710.0
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+margin_right = 1260.0
+margin_bottom = 546.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="VBoxContainer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_right = 20.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause" type="TouchScreenButton" parent="VBoxContainer/Control/Control"]
+self_modulate = Color( 0.854902, 0.964706, 0.698039, 1 )
+position = Vector2( -12, -15 )
+scale = Vector2( 0.8, 0.8 )
+normal = ExtResource( 6 )
+pressed = SubResource( 2 )
+action = "pause"
+
+[node name="Label" type="Label" parent="VBoxContainer/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -40.0
+margin_right = 40.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+custom_fonts/font = SubResource( 3 )
+text = "90"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlsContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 550.0
+margin_right = 1260.0
+margin_bottom = 700.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="Control" type="Control" parent="VBoxContainer/ControlsContainer"]
+visible = false
+margin_right = 150.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 0 )
+
+[node name="Up" type="TouchScreenButton" parent="VBoxContainer/ControlsContainer/Control"]
+self_modulate = Color( 0.854902, 0.964706, 0.698039, 1 )
+position = Vector2( 35, 0 )
+normal = ExtResource( 1 )
+pressed = SubResource( 2 )
+passby_press = true
+action = "jump"
+
+[node name="Left" type="TouchScreenButton" parent="VBoxContainer/ControlsContainer/Control"]
+self_modulate = Color( 0.854902, 0.964706, 0.698039, 1 )
+position = Vector2( 0, 65 )
+normal = ExtResource( 5 )
+pressed = SubResource( 2 )
+passby_press = true
+action = "left"
+
+[node name="Right" type="TouchScreenButton" parent="VBoxContainer/ControlsContainer/Control"]
+self_modulate = Color( 0.854902, 0.964706, 0.698039, 1 )
+position = Vector2( 75, 65 )
+normal = ExtResource( 4 )
+pressed = SubResource( 2 )
+passby_press = true
+action = "right"
+
+[node name="Control2" type="Control" parent="VBoxContainer/ControlsContainer"]
+visible = false
+margin_right = 1106.0
+margin_bottom = 150.0
+size_flags_horizontal = 3
+
+[node name="FPSmonitor" parent="VBoxContainer/ControlsContainer/Control2" instance=ExtResource( 2 )]
+
+[node name="Control4" type="Control" parent="VBoxContainer/ControlsContainer"]
+visible = false
+margin_right = 150.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 0 )
+
+[node name="kick" type="TouchScreenButton" parent="VBoxContainer/ControlsContainer/Control4"]
+self_modulate = Color( 0.580392, 0.776471, 0.294118, 1 )
+position = Vector2( -10, 65 )
+scale = Vector2( 0.8, 0.8 )
+normal = ExtResource( 8 )
+pressed = SubResource( 2 )
+action = "low_kick"
+
+[node name="block" type="TouchScreenButton" parent="VBoxContainer/ControlsContainer/Control4"]
+self_modulate = Color( 0.580392, 0.776471, 0.294118, 1 )
+position = Vector2( 75, 0 )
+scale = Vector2( 0.8, 0.8 )
+normal = ExtResource( 3 )
+pressed = SubResource( 2 )
+action = "block"
+
+[node name="attack" type="TouchScreenButton" parent="VBoxContainer/ControlsContainer/Control4"]
+self_modulate = Color( 0.580392, 0.776471, 0.294118, 1 )
+position = Vector2( 60, 65 )
+normal = ExtResource( 9 )
+pressed = SubResource( 2 )
+action = "attack"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 90.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

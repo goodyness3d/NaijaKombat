@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Append-TreeSummer.obj-b25a52867bc40ebfa60808fde8823e1c.mesh"
+
+[deps]
+
+files=[ "res://.import/Append-TreeSummer.obj-b25a52867bc40ebfa60808fde8823e1c.mesh" ]
+
+source_file="res://venues/ArtilleryFlyover/Append-TreeSummer.obj"
+dest_files=[ "res://.import/Append-TreeSummer.obj-b25a52867bc40ebfa60808fde8823e1c.mesh", "res://.import/Append-TreeSummer.obj-b25a52867bc40ebfa60808fde8823e1c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

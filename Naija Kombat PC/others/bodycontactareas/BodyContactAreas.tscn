@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://others/bodycontactareas/BodyContactAreas.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.28794, 0.245713, 0.363495 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.28794, 0.353277, 0.363495 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.28794, 0.245713, 0.363495 )
+
+[node name="BodyContactAreas" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="HeadArea" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="HeadArea"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.101724, 0 )
+shape = SubResource( 1 )
+
+[node name="GroinArea" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.965324, 0 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="GroinArea"]
+shape = SubResource( 2 )
+
+[node name="LegArea" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.385, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="LegArea"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.101724, 0 )
+shape = SubResource( 3 )
+
+[connection signal="area_entered" from="HeadArea" to="." method="_on_HeadArea_area_entered"]
+[connection signal="area_entered" from="GroinArea" to="." method="_on_GroinArea_area_entered"]
+[connection signal="area_entered" from="LegArea" to="." method="_on_LegArea_area_entered"]

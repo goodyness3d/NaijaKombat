@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Man Screaming Interrogation room.mp3-43edc2e0eccbd5a2be1ad956d3b0e2ef.mp3str"
+
+[deps]
+
+source_file="res://sounds/Man Screaming Interrogation room.mp3"
+dest_files=[ "res://.import/Man Screaming Interrogation room.mp3-43edc2e0eccbd5a2be1ad956d3b0e2ef.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

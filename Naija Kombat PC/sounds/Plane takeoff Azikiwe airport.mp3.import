@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Plane takeoff Azikiwe airport.mp3-7bd2730e8c44b6fe484717b141f7bcfc.mp3str"
+
+[deps]
+
+source_file="res://sounds/Plane takeoff Azikiwe airport.mp3"
+dest_files=[ "res://.import/Plane takeoff Azikiwe airport.mp3-7bd2730e8c44b6fe484717b141f7bcfc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

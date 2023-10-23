@@ -1,0 +1,14 @@
+[gd_resource type="SpatialMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://venues/AmaechiRailway/materials/Grass/grass_albedo.png" type="Texture" id=1]
+[ext_resource path="res://venues/AmaechiRailway/materials/Grass/grass_normal.png" type="Texture" id=3]
+
+[resource]
+params_cull_mode = 1
+albedo_color = Color( 0.5014, 0.601563, 0.187988, 1 )
+albedo_texture = ExtResource( 1 )
+metallic = 0.54
+roughness = 0.77
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 3 )

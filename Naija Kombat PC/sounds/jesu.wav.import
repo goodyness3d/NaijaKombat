@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/jesu.wav-96dce3b62ac723138f6ca70d7593d399.sample"
+
+[deps]
+
+source_file="res://sounds/jesu.wav"
+dest_files=[ "res://.import/jesu.wav-96dce3b62ac723138f6ca70d7593d399.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

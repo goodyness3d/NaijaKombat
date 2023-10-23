@@ -1,0 +1,241 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://others/fonts/A Dripping Marker.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://others/mainmenu/MainMenu.gd" type="Script" id=3]
+[ext_resource path="res://main_menu_image2.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 0, 0, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.419608, 0.603922, 0.352941, 0 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0.490196 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+outline_size = 1
+outline_color = Color( 0.419608, 0.603922, 0.352941, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.792157, 0.639216, 0, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id=6]
+content_margin_left = 5.0
+bg_color = Color( 0.792157, 0.639216, 0, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=7]
+size = 50
+outline_size = 3
+outline_color = Color( 0.419608, 0.603922, 0.352941, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id=9]
+content_margin_left = 5.0
+bg_color = Color( 0.780392, 0.780392, 0.780392, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 1, 1, 1, 0.490196 )
+corner_radius_top_left = 80
+corner_radius_bottom_left = 80
+
+[sub_resource type="DynamicFont" id=11]
+size = 100
+outline_size = 3
+outline_color = Color( 0.419608, 0.603922, 0.352941, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=12]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="MainMenu" type="TextureRect"]
+self_modulate = Color( 0.635294, 0.635294, 0.635294, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="HBoxContainer"]
+margin_right = 160.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 160, 0 )
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Control"]
+margin_right = 55.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 110, 0 )
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="HBoxContainer/Control/MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 110.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 50, 30 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 164.0
+margin_right = 464.0
+margin_bottom = 720.0
+custom_constants/separation = 10
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 135.0
+size_flags_vertical = 3
+
+[node name="StoryModeButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 145.0
+margin_right = 300.0
+margin_bottom = 245.0
+rect_min_size = Vector2( 300, 100 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+text = "Story mode"
+
+[node name="FreeFightButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 255.0
+margin_right = 300.0
+margin_bottom = 355.0
+rect_min_size = Vector2( 0, 100 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 7 )
+text = "Free fight"
+
+[node name="2PlayersButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 365.0
+margin_right = 300.0
+margin_bottom = 465.0
+rect_min_size = Vector2( 0, 100 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 7 )
+text = "2 players"
+
+[node name="OptionsButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 475.0
+margin_right = 300.0
+margin_bottom = 575.0
+rect_min_size = Vector2( 0, 100 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 7 )
+text = "Options"
+
+[node name="Control2" type="Control" parent="HBoxContainer/VBoxContainer"]
+margin_top = 585.0
+margin_right = 300.0
+margin_bottom = 720.0
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="HBoxContainer"]
+margin_left = 468.0
+margin_right = 1280.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/Control2"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -500.0
+margin_top = -150.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 500, 300 )
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Naija
+Kombat"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "entry"
+anims/entry = SubResource( 12 )
+
+[connection signal="pressed" from="HBoxContainer/Control/MarginContainer/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/StoryModeButton" to="." method="_on_StoryModeButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/FreeFightButton" to="." method="_on_FreeFightButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/2PlayersButton" to="." method="_on_2PlayersButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]

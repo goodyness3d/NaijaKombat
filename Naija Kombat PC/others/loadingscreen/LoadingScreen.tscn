@@ -1,0 +1,159 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://others/loadingscreen/loading.png" type="Texture" id=1]
+[ext_resource path="res://others/loadingscreen/LoadingScreen.gd" type="Script" id=2]
+[ext_resource path="res://others/fonts/A Dripping Marker.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://others/loadingscreen/loading_image.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+outline_size = 10
+outline_color = Color( 0.717647, 0.0117647, 0.0117647, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+outline_size = 29
+outline_color = Color( 0.717647, 0.0117647, 0.0117647, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=4]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="LoadingScreen" type="CanvasLayer"]
+layer = 5
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadingImage" type="TextureRect" parent="ColorRect"]
+modulate = Color( 0.52549, 0.403922, 0.352941, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -150.0
+margin_top = -50.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadingText" type="Label" parent="ColorRect"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -176.0
+margin_top = -75.0
+custom_fonts/font = SubResource( 1 )
+text = "loading...  "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadingText2" type="Label" parent="ColorRect"]
+modulate = Color( 1, 1, 1, 0.568627 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -271.5
+margin_right = 433.0
+margin_bottom = 271.5
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "  these thieves
+    ...
+
+     surely beat 'em up 
+		
+   the looters   ..."
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadingText3" type="Label" parent="ColorRect"]
+visible = false
+modulate = Color( 1, 1, 1, 0.568627 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -411.0
+margin_top = -115.5
+margin_bottom = 115.5
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "...
+
+break their backs"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadingText4" type="Label" parent="ColorRect"]
+visible = false
+modulate = Color( 1, 1, 1, 0.568627 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -411.0
+margin_bottom = 231.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "win         "
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/loading = SubResource( 4 )

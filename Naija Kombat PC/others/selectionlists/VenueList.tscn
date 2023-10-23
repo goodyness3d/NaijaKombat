@@ -1,0 +1,426 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://pictures/Amaechi_railway.png" type="Texture" id=1]
+[ext_resource path="res://others/selectionlists/pressedVenue.png" type="Texture" id=2]
+[ext_resource path="res://pictures/tollgate.png" type="Texture" id=3]
+[ext_resource path="res://pictures/dark_room.png" type="Texture" id=4]
+[ext_resource path="res://pictures/estate.png" type="Texture" id=5]
+[ext_resource path="res://pictures/military_base.png" type="Texture" id=6]
+[ext_resource path="res://pictures/market.png" type="Texture" id=7]
+[ext_resource path="res://pictures/interrogation_room.png" type="Texture" id=8]
+[ext_resource path="res://pictures/Azikiwe_airport.png" type="Texture" id=9]
+[ext_resource path="res://pictures/money_room.png" type="Texture" id=10]
+[ext_resource path="res://pictures/presidos_villa.png" type="Texture" id=11]
+[ext_resource path="res://pictures/Sambisa.png" type="Texture" id=12]
+[ext_resource path="res://pictures/senate_house.png" type="Texture" id=13]
+[ext_resource path="res://pictures/radio_Biafra.png" type="Texture" id=14]
+[ext_resource path="res://pictures/Artillery_flyover.png" type="Texture" id=15]
+[ext_resource path="res://pictures/student_lodge.png" type="Texture" id=16]
+[ext_resource path="res://others/fonts/A Dripping Marker.ttf" type="DynamicFontData" id=17]
+[ext_resource path="res://others/selectionlists/VenueList.gd" type="Script" id=18]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 62, 35 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 17 )
+
+[node name="VenueList" type="ScrollContainer"]
+margin_right = 12.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 420, 280 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_right = 380.0
+margin_bottom = 545.0
+rect_min_size = Vector2( 350, 250 )
+columns = 3
+
+[node name="AmaechiRailway" type="VBoxContainer" parent="GridContainer"]
+margin_right = 124.0
+margin_bottom = 100.0
+
+[node name="AmaechiRailway" type="TextureRect" parent="GridContainer/AmaechiRailway"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 1 )
+
+[node name="AmaechiRailway" type="TouchScreenButton" parent="GridContainer/AmaechiRailway/AmaechiRailway" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/AmaechiRailway"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "Amaechi railway"
+align = 1
+autowrap = true
+
+[node name="ArtilleryFlyover" type="VBoxContainer" parent="GridContainer"]
+margin_left = 128.0
+margin_right = 252.0
+margin_bottom = 100.0
+
+[node name="ArtilleryFlyover" type="TextureRect" parent="GridContainer/ArtilleryFlyover"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 15 )
+
+[node name="ArtilleryFlyover" type="TouchScreenButton" parent="GridContainer/ArtilleryFlyover/ArtilleryFlyover" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/ArtilleryFlyover"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "Artillery flyover"
+align = 1
+autowrap = true
+
+[node name="AzikiweAirport" type="VBoxContainer" parent="GridContainer"]
+margin_left = 256.0
+margin_right = 380.0
+margin_bottom = 100.0
+
+[node name="AzikiweAirport" type="TextureRect" parent="GridContainer/AzikiweAirport"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 9 )
+
+[node name="AzikiweAirport" type="TouchScreenButton" parent="GridContainer/AzikiweAirport/AzikiweAirport" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/AzikiweAirport"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "Azikiwe airport"
+align = 1
+autowrap = true
+
+[node name="DarkRoom" type="VBoxContainer" parent="GridContainer"]
+margin_top = 104.0
+margin_right = 124.0
+margin_bottom = 204.0
+
+[node name="DarkRoom" type="TextureRect" parent="GridContainer/DarkRoom"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 4 )
+
+[node name="DarkRoom" type="TouchScreenButton" parent="GridContainer/DarkRoom/DarkRoom" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/DarkRoom"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "dark room"
+align = 1
+autowrap = true
+
+[node name="InterrogationRoom" type="VBoxContainer" parent="GridContainer"]
+margin_left = 128.0
+margin_top = 104.0
+margin_right = 252.0
+margin_bottom = 204.0
+
+[node name="InterrogationRoom" type="TextureRect" parent="GridContainer/InterrogationRoom"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 8 )
+
+[node name="InterrogationRoom" type="TouchScreenButton" parent="GridContainer/InterrogationRoom/InterrogationRoom" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/InterrogationRoom"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "interrogation room"
+align = 1
+autowrap = true
+
+[node name="LekkiTollgate" type="VBoxContainer" parent="GridContainer"]
+margin_left = 256.0
+margin_top = 104.0
+margin_right = 380.0
+margin_bottom = 204.0
+
+[node name="LekkiTollgate" type="TextureRect" parent="GridContainer/LekkiTollgate"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 3 )
+
+[node name="LekkiTollgate" type="TouchScreenButton" parent="GridContainer/LekkiTollgate/LekkiTollgate" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/LekkiTollgate"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "Lekki tollgate"
+align = 1
+autowrap = true
+
+[node name="Market" type="VBoxContainer" parent="GridContainer"]
+margin_top = 208.0
+margin_right = 124.0
+margin_bottom = 308.0
+
+[node name="Market" type="TextureRect" parent="GridContainer/Market"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 7 )
+
+[node name="Market" type="TouchScreenButton" parent="GridContainer/Market/Market" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Market"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "market"
+align = 1
+autowrap = true
+
+[node name="MilitaryBase" type="VBoxContainer" parent="GridContainer"]
+margin_left = 128.0
+margin_top = 208.0
+margin_right = 252.0
+margin_bottom = 308.0
+
+[node name="MilitaryBase" type="TextureRect" parent="GridContainer/MilitaryBase"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 6 )
+
+[node name="MilitaryBase" type="TouchScreenButton" parent="GridContainer/MilitaryBase/MilitaryBase" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/MilitaryBase"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "military base"
+align = 1
+autowrap = true
+
+[node name="MoneyRoom" type="VBoxContainer" parent="GridContainer"]
+margin_left = 256.0
+margin_top = 208.0
+margin_right = 380.0
+margin_bottom = 308.0
+
+[node name="MoneyRoom" type="TextureRect" parent="GridContainer/MoneyRoom"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 10 )
+
+[node name="MoneyRoom" type="TouchScreenButton" parent="GridContainer/MoneyRoom/MoneyRoom" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/MoneyRoom"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "money room"
+align = 1
+autowrap = true
+
+[node name="PresidosVilla" type="VBoxContainer" parent="GridContainer"]
+margin_top = 312.0
+margin_right = 124.0
+margin_bottom = 441.0
+
+[node name="PresidosVilla" type="TextureRect" parent="GridContainer/PresidosVilla"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 11 )
+
+[node name="PresidosVilla" type="TouchScreenButton" parent="GridContainer/PresidosVilla/PresidosVilla" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/PresidosVilla"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "presido's villa"
+align = 1
+autowrap = true
+
+[node name="RadioBiafra" type="VBoxContainer" parent="GridContainer"]
+margin_left = 128.0
+margin_top = 312.0
+margin_right = 252.0
+margin_bottom = 441.0
+
+[node name="RadioBiafra" type="TextureRect" parent="GridContainer/RadioBiafra"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 14 )
+
+[node name="RadioBiafra" type="TouchScreenButton" parent="GridContainer/RadioBiafra/RadioBiafra" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/RadioBiafra"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "radio Biafra"
+align = 1
+autowrap = true
+
+[node name="RajiFasholaEstate" type="VBoxContainer" parent="GridContainer"]
+margin_left = 256.0
+margin_top = 312.0
+margin_right = 380.0
+margin_bottom = 441.0
+
+[node name="RajiFasholaEstate" type="TextureRect" parent="GridContainer/RajiFasholaEstate"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 5 )
+
+[node name="RajiFasholaEstate" type="TouchScreenButton" parent="GridContainer/RajiFasholaEstate/RajiFasholaEstate" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/RajiFasholaEstate"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 129.0
+custom_fonts/font = SubResource( 2 )
+text = "Raji Fashola estate"
+align = 1
+autowrap = true
+
+[node name="Sambisa" type="VBoxContainer" parent="GridContainer"]
+margin_top = 445.0
+margin_right = 124.0
+margin_bottom = 545.0
+
+[node name="Sambisa" type="TextureRect" parent="GridContainer/Sambisa"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 12 )
+
+[node name="Sambisa" type="TouchScreenButton" parent="GridContainer/Sambisa/Sambisa" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Sambisa"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "Sambisa forest"
+align = 1
+autowrap = true
+
+[node name="SenateHouse" type="VBoxContainer" parent="GridContainer"]
+margin_left = 128.0
+margin_top = 445.0
+margin_right = 252.0
+margin_bottom = 545.0
+
+[node name="SenateHouse" type="TextureRect" parent="GridContainer/SenateHouse"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 13 )
+
+[node name="SenateHouse" type="TouchScreenButton" parent="GridContainer/SenateHouse/SenateHouse" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/SenateHouse"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "Senate house"
+align = 1
+autowrap = true
+
+[node name="StudentLodge" type="VBoxContainer" parent="GridContainer"]
+margin_left = 256.0
+margin_top = 445.0
+margin_right = 380.0
+margin_bottom = 545.0
+
+[node name="StudentLodge" type="TextureRect" parent="GridContainer/StudentLodge"]
+margin_right = 124.0
+margin_bottom = 70.0
+texture = ExtResource( 16 )
+
+[node name="StudentLodge" type="TouchScreenButton" parent="GridContainer/StudentLodge/StudentLodge" groups=[
+"vbuttons",
+]]
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/StudentLodge"]
+margin_top = 74.0
+margin_right = 124.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 2 )
+text = "student lodge"
+align = 1
+autowrap = true

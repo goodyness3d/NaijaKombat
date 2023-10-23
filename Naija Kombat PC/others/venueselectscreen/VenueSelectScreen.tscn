@@ -1,0 +1,277 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://others/fonts/A Dripping Marker.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://pictures/dark_room.png" type="Texture" id=2]
+[ext_resource path="res://pictures/senate_house.png" type="Texture" id=3]
+[ext_resource path="res://pictures/Sambisa.png" type="Texture" id=4]
+[ext_resource path="res://pictures/Amaechi_railway.png" type="Texture" id=5]
+[ext_resource path="res://others/venueselectscreen/VenueSelectScreen.gd" type="Script" id=6]
+[ext_resource path="res://pictures/Azikiwe_airport.png" type="Texture" id=7]
+[ext_resource path="res://pictures/military_base.png" type="Texture" id=8]
+[ext_resource path="res://pictures/presidos_villa.png" type="Texture" id=9]
+[ext_resource path="res://pictures/market.png" type="Texture" id=10]
+[ext_resource path="res://pictures/Artillery_flyover.png" type="Texture" id=11]
+[ext_resource path="res://pictures/estate.png" type="Texture" id=13]
+[ext_resource path="res://pictures/radio_Biafra.png" type="Texture" id=14]
+[ext_resource path="res://pictures/interrogation_room.png" type="Texture" id=15]
+[ext_resource path="res://pictures/money_room.png" type="Texture" id=16]
+[ext_resource path="res://pictures/student_lodge.png" type="Texture" id=17]
+[ext_resource path="res://pictures/tollgate.png" type="Texture" id=18]
+[ext_resource path="res://main_menu_image2.png" type="Texture" id=19]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.419608, 0.603922, 0.352941, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0.490196 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+outline_size = 1
+outline_color = Color( 0.419608, 0.603922, 0.352941, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 60
+outline_size = 1
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0, 1, 0.576471, 0.588235 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 0 )
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 4
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0, 0, 0, 0.784314 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 40
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 4
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=11]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/VBoxContainer/Control/Label:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[node name="VenueSelectScreen" type="TextureRect"]
+self_modulate = Color( 0.517647, 0.517647, 0.517647, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 19 )
+expand = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="HBoxContainer"]
+margin_right = 160.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 160, 0 )
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Control"]
+margin_right = 55.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 110, 0 )
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="HBoxContainer/Control/MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 110.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 50, 30 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+text = "back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 164.0
+margin_right = 1004.0
+margin_bottom = 720.0
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer"]
+margin_right = 840.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -37.5
+margin_right = 375.0
+margin_bottom = 37.5
+rect_min_size = Vector2( 180, 30 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.419608, 0.603922, 0.352941, 1 )
+custom_colors/font_color_shadow = Color( 0.419608, 0.603922, 0.352941, 1 )
+text = " where will you fight?"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemList" type="ItemList" parent="HBoxContainer/VBoxContainer"]
+margin_top = 80.0
+margin_right = 840.0
+margin_bottom = 640.0
+rect_min_size = Vector2( 840, 560 )
+custom_styles/selected_focus = SubResource( 13 )
+custom_styles/bg = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_constants/icon_margin = 20
+items = [ "Amaechi railway", ExtResource( 5 ), false, "Artillery flyover", ExtResource( 11 ), false, "Azikiwe airport", ExtResource( 7 ), false, "Dark room", ExtResource( 2 ), false, "Market", ExtResource( 10 ), false, "Military base", ExtResource( 8 ), false, "Presido's villa", ExtResource( 9 ), false, "Sambisa", ExtResource( 4 ), false, "Senate house", ExtResource( 3 ), false, "Raji Fashola estate", ExtResource( 13 ), false, "Radio Biafra", ExtResource( 14 ), false, "Interrogation room", ExtResource( 15 ), false, "Money room", ExtResource( 16 ), false, "Student lodge", ExtResource( 17 ), false, "Lekki tollgate", ExtResource( 18 ), false ]
+allow_rmb_select = true
+same_column_width = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control2" type="Control" parent="HBoxContainer/VBoxContainer"]
+margin_top = 644.0
+margin_right = 840.0
+margin_bottom = 720.0
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="HBoxContainer"]
+margin_left = 1008.0
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 100, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Control2"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -150.0
+margin_top = -40.0
+rect_min_size = Vector2( 150, 0 )
+custom_constants/margin_right = 5
+custom_constants/margin_bottom = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="HBoxContainer/Control2/MarginContainer"]
+visible = false
+margin_right = 145.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 70, 30 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.780392, 0.780392, 0.780392, 1 )
+text = "Go"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UnlockNotice" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -640.0
+margin_top = -100.0
+margin_right = 640.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 200 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+text = "unlock this venue in story mode"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "entry"
+anims/entry = SubResource( 11 )
+anims/ingame = SubResource( 12 )
+next/entry = "ingame"
+
+[connection signal="pressed" from="HBoxContainer/Control/MarginContainer/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="item_activated" from="HBoxContainer/VBoxContainer/ItemList" to="." method="_on_ItemList_item_activated"]
+[connection signal="item_selected" from="HBoxContainer/VBoxContainer/ItemList" to="." method="_on_ItemList_item_selected"]
+[connection signal="pressed" from="HBoxContainer/Control2/MarginContainer/StartButton" to="." method="_on_StartButton_pressed"]

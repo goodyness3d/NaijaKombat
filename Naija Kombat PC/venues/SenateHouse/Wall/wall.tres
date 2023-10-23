@@ -1,0 +1,9 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://venues/SenateHouse/Wall/wall_normal.png" type="Texture" id=3]
+
+[resource]
+metallic = 1.0
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 3 )

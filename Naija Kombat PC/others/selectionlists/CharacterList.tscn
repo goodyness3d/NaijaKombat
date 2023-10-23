@@ -1,0 +1,586 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://others/fonts/A Dripping Marker.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://pictures/Wike.png" type="Texture" id=2]
+[ext_resource path="res://pictures/BMB.png" type="Texture" id=3]
+[ext_resource path="res://pictures/DSS.png" type="Texture" id=4]
+[ext_resource path="res://pictures/Akpabio.png" type="Texture" id=5]
+[ext_resource path="res://pictures/Obaseki.png" type="Texture" id=6]
+[ext_resource path="res://others/selectionlists/pressedCharacter.png" type="Texture" id=7]
+[ext_resource path="res://pictures/Lai.png" type="Texture" id=8]
+[ext_resource path="res://pictures/Saraki.png" type="Texture" id=9]
+[ext_resource path="res://pictures/Ikpeazu.png" type="Texture" id=10]
+[ext_resource path="res://pictures/Buratai.png" type="Texture" id=11]
+[ext_resource path="res://pictures/PMB.png" type="Texture" id=12]
+[ext_resource path="res://pictures/Yahooboy.png" type="Texture" id=13]
+[ext_resource path="res://pictures/LazyYouth.png" type="Texture" id=14]
+[ext_resource path="res://pictures/FSars.png" type="Texture" id=15]
+[ext_resource path="res://pictures/Fashola.png" type="Texture" id=16]
+[ext_resource path="res://pictures/FemiFani.png" type="Texture" id=17]
+[ext_resource path="res://pictures/Amaechi.png" type="Texture" id=18]
+[ext_resource path="res://pictures/Nnamdi.png" type="Texture" id=19]
+[ext_resource path="res://pictures/Reno.png" type="Texture" id=20]
+[ext_resource path="res://pictures/Osinbajo.png" type="Texture" id=21]
+[ext_resource path="res://pictures/Rochas.png" type="Texture" id=22]
+[ext_resource path="res://pictures/Tinubu.png" type="Texture" id=23]
+[ext_resource path="res://others/selectionlists/CharacterList.gd" type="Script" id=24]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 35, 25 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="CharacterList" type="ScrollContainer"]
+margin_right = 12.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 350, 500 )
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_right = 350.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 350, 250 )
+columns = 4
+
+[node name="Akpabio" type="VBoxContainer" parent="GridContainer"]
+margin_right = 70.0
+margin_bottom = 80.0
+
+[node name="Akpabio" type="TextureRect" parent="GridContainer/Akpabio"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 5 )
+
+[node name="Akpabio" type="TouchScreenButton" parent="GridContainer/Akpabio/Akpabio" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Akpabio"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Akpabio"
+align = 1
+autowrap = true
+
+[node name="Amaechi" type="VBoxContainer" parent="GridContainer"]
+margin_left = 74.0
+margin_right = 144.0
+margin_bottom = 80.0
+
+[node name="Amaechi" type="TextureRect" parent="GridContainer/Amaechi"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 18 )
+
+[node name="Amaechi" type="TouchScreenButton" parent="GridContainer/Amaechi/Amaechi" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Amaechi"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Amaechi"
+align = 1
+autowrap = true
+
+[node name="BM Bruce" type="VBoxContainer" parent="GridContainer"]
+margin_left = 148.0
+margin_right = 218.0
+margin_bottom = 80.0
+
+[node name="BM Bruce" type="TextureRect" parent="GridContainer/BM Bruce"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 3 )
+
+[node name="BM Bruce" type="TouchScreenButton" parent="GridContainer/BM Bruce/BM Bruce" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/BM Bruce"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "BM Bruce"
+align = 1
+autowrap = true
+
+[node name="Buratai" type="VBoxContainer" parent="GridContainer"]
+margin_left = 222.0
+margin_right = 292.0
+margin_bottom = 80.0
+
+[node name="Buratai" type="TextureRect" parent="GridContainer/Buratai"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 11 )
+
+[node name="Buratai" type="TouchScreenButton" parent="GridContainer/Buratai/Buratai" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Buratai"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Buratai"
+align = 1
+autowrap = true
+
+[node name="DSS" type="VBoxContainer" parent="GridContainer"]
+margin_top = 84.0
+margin_right = 70.0
+margin_bottom = 164.0
+
+[node name="DSS" type="TextureRect" parent="GridContainer/DSS"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 4 )
+
+[node name="DSS" type="TouchScreenButton" parent="GridContainer/DSS/DSS" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/DSS"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "DSS"
+align = 1
+autowrap = true
+
+[node name="FSars" type="VBoxContainer" parent="GridContainer"]
+margin_left = 74.0
+margin_top = 84.0
+margin_right = 144.0
+margin_bottom = 164.0
+
+[node name="FSars" type="TextureRect" parent="GridContainer/FSars"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 15 )
+
+[node name="FSars" type="TouchScreenButton" parent="GridContainer/FSars/FSars" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/FSars"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "FSars"
+align = 1
+autowrap = true
+
+[node name="Fashola" type="VBoxContainer" parent="GridContainer"]
+margin_left = 148.0
+margin_top = 84.0
+margin_right = 218.0
+margin_bottom = 164.0
+
+[node name="Fashola" type="TextureRect" parent="GridContainer/Fashola"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 16 )
+
+[node name="Fashola" type="TouchScreenButton" parent="GridContainer/Fashola/Fashola" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Fashola"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Fashola"
+align = 1
+autowrap = true
+
+[node name="FemiFani" type="VBoxContainer" parent="GridContainer"]
+margin_left = 222.0
+margin_top = 84.0
+margin_right = 292.0
+margin_bottom = 164.0
+
+[node name="FemiFani" type="TextureRect" parent="GridContainer/FemiFani"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 17 )
+
+[node name="FemiFani" type="TouchScreenButton" parent="GridContainer/FemiFani/FemiFani" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/FemiFani"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "FemiFani"
+align = 1
+autowrap = true
+
+[node name="Ikpeazu" type="VBoxContainer" parent="GridContainer"]
+margin_top = 168.0
+margin_right = 70.0
+margin_bottom = 248.0
+
+[node name="Ikpeazu" type="TextureRect" parent="GridContainer/Ikpeazu"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 10 )
+
+[node name="Ikpeazu" type="TouchScreenButton" parent="GridContainer/Ikpeazu/Ikpeazu" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Ikpeazu"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Ikpeazu"
+align = 1
+autowrap = true
+
+[node name="Lai" type="VBoxContainer" parent="GridContainer"]
+margin_left = 74.0
+margin_top = 168.0
+margin_right = 144.0
+margin_bottom = 248.0
+
+[node name="Lai" type="TextureRect" parent="GridContainer/Lai"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 8 )
+
+[node name="Lai" type="TouchScreenButton" parent="GridContainer/Lai/Lai" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Lai"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Lai"
+align = 1
+autowrap = true
+
+[node name="LazyYouth" type="VBoxContainer" parent="GridContainer"]
+margin_left = 148.0
+margin_top = 168.0
+margin_right = 218.0
+margin_bottom = 248.0
+
+[node name="LazyYouth" type="TextureRect" parent="GridContainer/LazyYouth"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 14 )
+
+[node name="LazyYouth" type="TouchScreenButton" parent="GridContainer/LazyYouth/LazyYouth" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/LazyYouth"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "LazyYouth"
+align = 1
+autowrap = true
+
+[node name="Nnamdi" type="VBoxContainer" parent="GridContainer"]
+margin_left = 222.0
+margin_top = 168.0
+margin_right = 292.0
+margin_bottom = 248.0
+
+[node name="Nnamdi" type="TextureRect" parent="GridContainer/Nnamdi"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 19 )
+
+[node name="Nnamdi" type="TouchScreenButton" parent="GridContainer/Nnamdi/Nnamdi" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Nnamdi"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Nnamdi"
+align = 1
+autowrap = true
+
+[node name="Obaseki" type="VBoxContainer" parent="GridContainer"]
+margin_top = 252.0
+margin_right = 70.0
+margin_bottom = 332.0
+
+[node name="Obaseki" type="TextureRect" parent="GridContainer/Obaseki"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 6 )
+
+[node name="Obaseki" type="TouchScreenButton" parent="GridContainer/Obaseki/Obaseki" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Obaseki"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Obaseki"
+align = 1
+autowrap = true
+
+[node name="Osinbajo" type="VBoxContainer" parent="GridContainer"]
+margin_left = 74.0
+margin_top = 252.0
+margin_right = 144.0
+margin_bottom = 332.0
+
+[node name="Osinbajo" type="TextureRect" parent="GridContainer/Osinbajo"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 21 )
+
+[node name="Osinbajo" type="TouchScreenButton" parent="GridContainer/Osinbajo/Osinbajo" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Osinbajo"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Osinbajo"
+align = 1
+autowrap = true
+
+[node name="PMB" type="VBoxContainer" parent="GridContainer"]
+margin_left = 148.0
+margin_top = 252.0
+margin_right = 218.0
+margin_bottom = 332.0
+
+[node name="PMB" type="TextureRect" parent="GridContainer/PMB"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 12 )
+
+[node name="PMB" type="TouchScreenButton" parent="GridContainer/PMB/PMB" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/PMB"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "PMB"
+align = 1
+autowrap = true
+
+[node name="Reno" type="VBoxContainer" parent="GridContainer"]
+margin_left = 222.0
+margin_top = 252.0
+margin_right = 292.0
+margin_bottom = 332.0
+
+[node name="Reno" type="TextureRect" parent="GridContainer/Reno"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 20 )
+
+[node name="Reno" type="TouchScreenButton" parent="GridContainer/Reno/Reno" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Reno"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Reno"
+align = 1
+autowrap = true
+
+[node name="Rochas" type="VBoxContainer" parent="GridContainer"]
+margin_top = 336.0
+margin_right = 70.0
+margin_bottom = 416.0
+
+[node name="Rochas" type="TextureRect" parent="GridContainer/Rochas"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 22 )
+
+[node name="Rochas" type="TouchScreenButton" parent="GridContainer/Rochas/Rochas" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Rochas"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Rochas"
+align = 1
+autowrap = true
+
+[node name="Saraki" type="VBoxContainer" parent="GridContainer"]
+margin_left = 74.0
+margin_top = 336.0
+margin_right = 144.0
+margin_bottom = 416.0
+
+[node name="Saraki" type="TextureRect" parent="GridContainer/Saraki"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 9 )
+
+[node name="Saraki" type="TouchScreenButton" parent="GridContainer/Saraki/Saraki" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Saraki"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Saraki"
+align = 1
+autowrap = true
+
+[node name="Tinubu" type="VBoxContainer" parent="GridContainer"]
+margin_left = 148.0
+margin_top = 336.0
+margin_right = 218.0
+margin_bottom = 416.0
+
+[node name="Tinubu" type="TextureRect" parent="GridContainer/Tinubu"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 23 )
+
+[node name="Tinubu" type="TouchScreenButton" parent="GridContainer/Tinubu/Tinubu" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Tinubu"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Tinubu"
+align = 1
+autowrap = true
+
+[node name="Wike" type="VBoxContainer" parent="GridContainer"]
+margin_left = 222.0
+margin_top = 336.0
+margin_right = 292.0
+margin_bottom = 416.0
+
+[node name="Wike" type="TextureRect" parent="GridContainer/Wike"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 2 )
+
+[node name="Wike" type="TouchScreenButton" parent="GridContainer/Wike/Wike" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/Wike"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "Wike"
+align = 1
+autowrap = true
+
+[node name="YahooBoy" type="VBoxContainer" parent="GridContainer"]
+margin_top = 420.0
+margin_right = 70.0
+margin_bottom = 500.0
+
+[node name="YahooBoy" type="TextureRect" parent="GridContainer/YahooBoy"]
+margin_right = 70.0
+margin_bottom = 50.0
+texture = ExtResource( 13 )
+
+[node name="YahooBoy" type="TouchScreenButton" parent="GridContainer/YahooBoy/YahooBoy" groups=[
+"buttons",
+]]
+pressed = ExtResource( 7 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/YahooBoy"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+text = "YahooBoy"
+align = 1
+autowrap = true

@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://controllers/joystick/analog.gd" type="Script" id=1]
+[ext_resource path="res://controllers/joystick/textures/joystick.png" type="Texture" id=2]
+[ext_resource path="res://controllers/joystick/textures/background.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 48.0
+
+[node name="JoystickScene" type="Sprite"]
+texture = ExtResource( 3 )
+
+[node name="Joystick" type="TouchScreenButton" parent="."]
+self_modulate = Color( 0.192157, 0.780392, 0.486275, 1 )
+position = Vector2( -48, -52 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+shape_visible = false
+script = ExtResource( 1 )

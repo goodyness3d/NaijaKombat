@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/grudgefight.ogg-93e24919c3c736d5cf30dd6b2631a98c.oggstr"
+
+[deps]
+
+source_file="res://sounds/grudgefight.ogg"
+dest_files=[ "res://.import/grudgefight.ogg-93e24919c3c736d5cf30dd6b2631a98c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://venues/RajiFasholaEstate/textures/ground.png" type="Texture" id=1]
+
+[resource]
+albedo_texture = ExtResource( 1 )
+metallic = 0.6
+normal_enabled = true
+normal_scale = 1.0
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource( 1 )
+ao_on_uv2 = false
+ao_texture_channel = 0
+uv1_scale = Vector3( 10, 10, 1 )
